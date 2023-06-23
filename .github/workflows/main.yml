@@ -88,6 +88,7 @@ jobs:
           rm -rf ${{ github.event.inputs.solution_name }}.zip
           rm -rf ${{ github.event.inputs.solution_name }}_managed.zip
           git config user.name ${{ github.event.inputs.user_name }}
+          git config user.email "askinner@infoavan.com"
           git pull 
           git add --all
           git commit -am "${{ github.event.inputs.commit_message }}" --allow-empty
